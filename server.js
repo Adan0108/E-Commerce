@@ -1,8 +1,9 @@
 const app = require("./src/app");
+require('dotenv').config();
 
-const PORT =  3055;
+const PORT =  process.env.PORT || 3055;
 
-const server = app.listen(3055, () => {
+const server = app.listen(PORT, () => {
   console.log(`WSV eCommerce start with ${PORT}`);
 })
 
@@ -12,3 +13,4 @@ process.on('SIGINT', () => {
     //notify.send(ping...)
   });
 })
+

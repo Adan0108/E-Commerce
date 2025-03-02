@@ -20,9 +20,9 @@ const dev = {
     port: process.env.DEV_APP_PORT || 3052,
   },
   db:{
-    host: process.env.DEV_DB_PORT || 'localhost',
+    host: process.env.HOST || 'localhost',
     port: process.env.DEV_DB_PORT || 27017,
-    dbName: process.env.DEV_DB_NAME || 'E-CommerceDev'
+    name: process.env.DEV_DB_NAME || 'E-CommerceDev'
   }
 }
 
@@ -33,13 +33,13 @@ const pro = {
   db:{
     host: process.env.PRO_DB_HOST || 'localhost' , // || is used to provide a default value if the environment variable is not set,
     port: process.env.PRO_DB_PORT || 27017,
-    dbName: process.env.PRO_DB_NAME || 'E-CommercePro'
+    name: process.env.PRO_DB_NAME || 'E-CommercePro'
   }
 }
 
 const config = {dev,pro}
 const env = process.env.NODE_ENV || 'dev'
 
-// console.log(config[env],env)
+console.log(config[env],env)
 
 module.exports = config[`dev`]

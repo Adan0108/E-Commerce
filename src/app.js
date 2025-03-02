@@ -11,23 +11,29 @@ const compression = require('compression'); //for compressing response
 app.use(morgan("dev"));
 app.use(helmet())
 app.use(compression());
+app.use(express.json()); // for parsing json request
+app.use(express.urlencoded({
+  extended:true  // support parsing of application/x-www-form-urlencoded
+}))
 
 //init db
 require('./dbs/init.mongodb');
 // const { checkOverload } = require(`./helpers/check.connect`)
 // checkOverload();
 
-//init routes
-app.get('/', (req, res, next) => {
+// init routes
+// app.get('/', (req, res, next) => {
 
-  // const strCompress = 'Hello world'
+//   // const strCompress = 'Hello world'
 
-  return res.status(200).json({ 
-    message: 'Welcome to the API!' ,
-    // metadata : strCompress.repeat(1000),
-  });
-})
+//   return res.status(200).json({ 
+//     message: 'Welcome to the API!' ,
+//     // metadata : strCompress.repeat(1000),
+//   });
+// })
 
+app.use('/',require('./routes'))
+ 
 //handle error
 
 module.exports = app;

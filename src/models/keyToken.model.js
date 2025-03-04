@@ -20,9 +20,14 @@ var keyTokenSchema = new Schema({
         type:String,
         required:true,
     },
-    refreshToken:{
+    //use for tracking and suspect hacking
+    refreshTokensUsed:{
         type: Array,
         default: [],
+    },
+    refreshToken: {
+        type: String,
+        required: true,
     }
 } , {
   collection: COLLECTION_NAME,

@@ -8,6 +8,8 @@ const {createTokenPair} = require("../auth/authUtils");
 const { getInfoData } = require("../utils");
 const {BadRequestError , ConflictRequestError } = require("../core/error.response");
 
+const { findByEmail } = require('./shop.service')
+
 const RoleShop = {
   SHOP: 'SHOP',
   WRITER: '00001', //this code is use for writer role but we only show client the code for secure
@@ -16,6 +18,25 @@ const RoleShop = {
 }
 
 class AccessService {
+  /*
+   1- Check email in dbs
+   2- Match password
+   3 - Create AT and RT and save
+   4 - Generate tokens
+   5 - Get data return login
+  */
+  static login = async({email, password , refreshToken = null }) => {
+    const foundShop = await findByEmail({email})
+    if (!foundShop) {
+      throw new BadRequestError('Shop not register')
+    }
+
+    const match = bcrypt.compare(password, foundShop.password);
+    if (!match){
+      throw new BadRequestError('Invalid password')
+    }
+  }
+
   static signUp = async ({ name , email , password }) => {
     try {
       //step 1 :check if email already exists ( use lean for java opject to reduce the size and time)

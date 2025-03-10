@@ -1,6 +1,5 @@
 'use strict'
 
-const { asyncHandler } = require('../helpers/asyncHandler')
 const HEADER = {
   API_KEY: 'x-api-key',
   AUTHORIZATION: 'authorization'
@@ -52,5 +51,4 @@ const permission = (permission) => {
 module.exports = {
   apiKey,
   permission,
-  asyncHandler
 }

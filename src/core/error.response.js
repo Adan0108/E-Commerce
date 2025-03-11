@@ -36,18 +36,18 @@ class BadRequestError extends ErrorResponse {
 }
 
 class AuthFailureError extends ErrorResponse {
-  constructor(message = ReasonPhrases.UNAUTHORIZED, statusCode = StatusCode.UNAUTHORIZED) {
+  constructor(message = ReasonStatusCode.UNAUTHORIZED, statusCode = StatusCode.UNAUTHORIZED) {
     super(message, statusCode)
   }
 }
 
 class NotFoundError extends ErrorResponse {
-  constructor(message = ReasonPhrases.NOT_FOUND, statusCode = StatusCode.NOT_FOUND) {
+  constructor(message = ReasonStatusCode.NOT_FOUND, statusCode = StatusCode.NOT_FOUND) {
     super(message, statusCode)
   }
 }
 class ForbiddenError extends ErrorResponse {
-  constructor(message = ReasonPhrases.FORBIDDEN, statusCode = StatusCode.FORBIDDEN) {
+  constructor(message = ReasonStatusCode.FORBIDDEN, statusCode = StatusCode.FORBIDDEN) {
     super(message, statusCode)
   }
 

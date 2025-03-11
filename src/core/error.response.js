@@ -17,7 +17,7 @@ const {
 
 class ErrorResponse extends Error {
 
-  constructor(message,status){
+  constructor(message, status) {
     super(message)
     this.status = status
   }
@@ -36,15 +36,21 @@ class BadRequestError extends ErrorResponse {
 }
 
 class AuthFailureError extends ErrorResponse {
-  constructor(message = ReasonPhrases.UNAUTHORIZED , statusCode = StatusCode.UNAUTHORIZED) {
+  constructor(message = ReasonPhrases.UNAUTHORIZED, statusCode = StatusCode.UNAUTHORIZED) {
     super(message, statusCode)
   }
 }
 
 class NotFoundError extends ErrorResponse {
-  constructor(message = ReasonPhrases.NOT_FOUND , statusCode = StatusCode.NOT_FOUND) {
+  constructor(message = ReasonPhrases.NOT_FOUND, statusCode = StatusCode.NOT_FOUND) {
     super(message, statusCode)
   }
+}
+class ForbiddenError extends ErrorResponse {
+  constructor(message = ReasonPhrases.FORBIDDEN, statusCode = StatusCode.FORBIDDEN) {
+    super(message, statusCode)
+  }
+
 }
 
 
@@ -52,5 +58,6 @@ module.exports = {
   ConflictRequestError,
   BadRequestError,
   AuthFailureError,
-  NotFoundError
- }
+  NotFoundError,
+  ForbiddenError
+}

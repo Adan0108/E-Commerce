@@ -22,49 +22,84 @@ class AccessService {
   /*
   Check this token used?
    */
-  static handlerRefreshToken = async (refreshToken) => {
+  //V1
+  // static handlerRefreshToken = async (refreshToken) => {
 
-    //check xem token nay da duoc su dung chua?
-    const foundToken = await keyTokenService.findByRefreshTokenUsed(refreshToken)
-    if (foundToken) {
-      //decode to see who user is this ?
-      const { userId, email } = await verifyJWT(refreshToken, foundToken.privateKey);
-      console.log({ userId, email })
+  //   //check xem token nay da duoc su dung chua?
+  //   const foundToken = await keyTokenService.findByRefreshTokenUsed(refreshToken)
+  //   if (foundToken) {
+  //     //decode to see who user is this ?
+  //     const { userId, email } = await verifyJWT(refreshToken, foundToken.privateKey);
+  //     console.log({ userId, email })
 
-      //delete
-      //xoa tat ca token trong keyStore
-      await keyTokenService.deleteKeyById(userId)
-      throw new ForbiddenError('Something Wrong Happend !! Please relogin')
-    }
+  //     //delete
+  //     //xoa tat ca token trong keyStore
+  //     await keyTokenService.deleteKeyById(userId)
+  //     throw new ForbiddenError('Something Wrong Happend !! Please relogin')
+  //   }
 
-    //No
-    const holderToken = await keyTokenService.findByRefreshToken( refreshToken )
-    if (!holderToken) throw new AuthFailureError('Shop not registered 1')
+  //   //No
+  //   const holderToken = await keyTokenService.findByRefreshToken( refreshToken )
+  //   if (!holderToken) throw new AuthFailureError('Shop not registered 1')
 
-    //verify token
-    const { userId, email } = await verifyJWT(refreshToken, holderToken.privateKey);
-    console.log('[2]--',{ userId, email })
-    //check UserId
-    const foundShop = await findByEmail({ email })
-    if (!foundShop) throw new AuthFailureError('Shop not registered 2')
+  //   //verify token
+  //   const { userId, email } = await verifyJWT(refreshToken, holderToken.privateKey);
+  //   console.log('[2]--',{ userId, email })
+  //   //check UserId
+  //   const foundShop = await findByEmail({ email })
+  //   if (!foundShop) throw new AuthFailureError('Shop not registered 2')
 
-    //create 1 cap moi
-    const tokens = await createTokenPair({userId, email}, holderToken.publicKey, holderToken.privateKey)
+  //   //create 1 cap moi
+  //   const tokens = await createTokenPair({userId, email}, holderToken.publicKey, holderToken.privateKey)
 
-    //update token
-    await holderToken.updateOne({
-      $set:{
-        refreshToken : tokens.refreshToken,
-      },
-      $addToSet: {
-        refreshTokensUsed: refreshToken, //da duoc su dung de lay token moi roi
+  //   //update token
+  //   await holderToken.updateOne({
+  //     $set:{
+  //       refreshToken : tokens.refreshToken,
+  //     },
+  //     $addToSet: {
+  //       refreshTokensUsed: refreshToken, //da duoc su dung de lay token moi roi
+  //     }
+  //   })
+
+  //   return {
+  //     user: { userId, email },
+  //     tokens
+  //   }
+
+  // }
+
+  //V2
+    static handlerRefreshTokenV2 = async ({keyStore , user, refreshToken}) => {
+      const { userId , email } = user;
+
+      if(keyStore.refreshTokensUsed.includes(refreshToken)){
+        await keyTokenService.deleteKeyById(userId)
+        throw new ForbiddenError(' Something Wrong happended !! Please relogin')
       }
-    })
 
-    return {
-      user: { userId, email },
-      tokens
-    }
+      if(keyStore.refreshToken !== refreshToken) throw new AuthFailureError('Shop not register')
+      
+      const foundShop = await findByEmail({ email })
+      if (!foundShop) throw new AuthFailureError('Shop not registered 2')
+
+      //create 1 cap moi
+      const tokens = await createTokenPair({userId, email}, keyStore.publicKey, keyStore.privateKey)
+
+      //update token
+      await keyStore.updateOne({
+        $set:{
+          refreshToken : tokens.refreshToken,
+        },
+        $addToSet: {
+          refreshTokensUsed: refreshToken, //da duoc su dung de lay token moi roi
+        }
+      })
+
+      return {
+        user,
+        tokens
+      }
 
   }
 

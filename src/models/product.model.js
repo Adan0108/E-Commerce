@@ -1,6 +1,6 @@
 'use strict';
 
-const {model , Schema , Types } = require('moongoose')
+const {model , Schema , Types } = require('mongoose')
 
 const DOCUMENT_NAME = 'Product';
 const COLLECTION_NAME = 'Products';
@@ -71,5 +71,5 @@ const electronicSchema = new Schema({
 module.exports = {
   product: model(DOCUMENT_NAME,productSchema),
   electronic: model('Electronics',electronicSchema),
-  cloth: model('Clothing',clothingSchema)
+  clothing: model('Clothing',clothingSchema)
 };

@@ -8,7 +8,10 @@ class ProductController {
     
     new SuccessResponse({
       message: 'Create Product Created Success!',
-      metadata: await ProductService.createProduct(req.body.product_type , req.body)
+      metadata: await ProductService.createProduct(req.body.product_type , {
+        ...req.body,
+        product_shop: req.user.userId
+      })
     }).send(res)
   }
 }

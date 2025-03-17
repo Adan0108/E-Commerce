@@ -1,6 +1,6 @@
 'use strict'
 
-const { product , clothing , electronic } = require('../models/product.model')
+const { product , clothing , electronic, furniture } = require('../models/product.model')
 const { BadRequestError } = require('../core/error.response')
 
 // define Factory class to create product
@@ -11,6 +11,8 @@ class ProductFactory {
         return new Electronics(payload).createProduct()
       case 'Clothing':
         return new Clothing(payload).createProduct()
+      case 'Furniture':
+        return new Furniture(payload).createProduct()
       default:
         throw new BadRequestError(`Invalid product type ${type}`)
     }
@@ -59,6 +61,20 @@ class Electronics extends Product{
     if(!newElectronics) throw new BadRequestError("create new Electronics Error")
 
     const newProduct = await super.createProduct(newElectronics._id)
+    if(!newProduct) throw new BadRequestError("create new Product Error")
+      return newProduct
+  }
+}
+
+//Define sub-class for different product types newFuriture
+class Furniture extends Product{
+  async createProduct(){
+    const newFuriture = await furniture.create({
+      ...this.product_attributes,
+    product_shop: this.product_shop})
+    if(!newFuriture) throw new BadRequestError("create new newFuriture Error")
+
+    const newProduct = await super.createProduct(newFuriture._id)
     if(!newProduct) throw new BadRequestError("create new Product Error")
       return newProduct
   }

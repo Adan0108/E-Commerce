@@ -8,7 +8,9 @@ const { findAllDraftsForShop,
     findAllPublishForShop,
      searchProductByUser,
     findAllProducts,
-    findProduct } = require('../models/repositories/product.repo')
+    findProduct,
+  updateProductById } = require('../models/repositories/product.repo')
+const { removeUndefinedObject,updateNestedObjectParse } = require('../utils')
 
 // define Factory class to create product
 class ProductFactory {
@@ -26,12 +28,12 @@ class ProductFactory {
     return new productClass(payload).createProduct()
   }
 
-  static async updateProduct( type , payload ){
-
+  static async updateProduct( type , productId , payload  ){
+    // console.log('Updating product(fact) with ID:', productId);
     const productClass = ProductFactory.productRegistry[type]
-
     if (!productClass) throw new BadRequestError(`Invalid type ${type}`)
-    return new productClass(payload).createProduct()
+
+    return new productClass(payload).updateProduct(productId)
   }
 
   // PUT //
@@ -87,6 +89,12 @@ class Product{
   async createProduct(product_id){
     return await product.create({...this, _id:product_id})
   }
+
+  //update Product
+  async updateProduct( productId , bodyUpdate ){
+    // console.log('Updating product(super) with ID:', productId);
+    return await updateProductById( {productId, bodyUpdate, model : product})
+  }
 }
 
 //Define sub-class for different product types Clothing
@@ -100,6 +108,23 @@ class Clothing extends Product{
     const newProduct = await super.createProduct(newClothing._id)
     if(!newProduct) throw new BadRequestError("create new Product Error")
       return newProduct
+  }
+  async updateProduct( productId ){
+    // console.log('Updating product(child) with ID:', productId);
+    //1. remove attr has null or undefined
+    // console.log('[1]::', this)
+     const objectParams = removeUndefinedObject(this)
+    //  console.log('[2]::', this)
+    //2. check xem updata o cho nao ?
+    if(objectParams.product_attributes){
+      //update child
+      await updateProductById( 
+        {productId, 
+          objectParams : updateNestedObjectParse(objectParams.product_attributes),
+          model : clothing})
+    }
+    const updateProduct = await super.updateProduct(productId, updateNestedObjectParse(objectParams))
+    return updateProduct
   }
 }
 
@@ -115,6 +140,23 @@ class Electronics extends Product{
     if(!newProduct) throw new BadRequestError("create new Product Error")
       return newProduct
   }
+  async updateProduct( productId ){
+    // console.log('Updating product(child) with ID:', productId);
+    //1. remove attr has null or undefined
+    // console.log('[1]::', this)
+     const objectParams = removeUndefinedObject(this)
+    //  console.log('[2]::', this)
+    //2. check xem updata o cho nao ?
+    if(objectParams.product_attributes){
+      //update child
+      await updateProductById( 
+        {productId, 
+          objectParams : updateNestedObjectParse(objectParams.product_attributes),
+          model : electronic})
+    }
+    const updateProduct = await super.updateProduct(productId, updateNestedObjectParse(objectParams))
+    return updateProduct
+  }
 }
 
 //Define sub-class for different product types newFuriture
@@ -128,6 +170,23 @@ class Furniture extends Product{
     const newProduct = await super.createProduct(newFuriture._id)
     if(!newProduct) throw new BadRequestError("create new Product Error")
       return newProduct
+  }
+  async updateProduct( productId ){
+    // console.log('Updating product(child) with ID:', productId);
+    //1. remove attr has null or undefined
+    // console.log('[1]::', this)
+     const objectParams = removeUndefinedObject(this)
+    //  console.log('[2]::', this)
+    //2. check xem updata o cho nao ?
+    if(objectParams.product_attributes){
+      //update child
+      await updateProductById( 
+        {productId, 
+          objectParams : updateNestedObjectParse(objectParams.product_attributes),
+          model : furniture})
+    }
+    const updateProduct = await super.updateProduct(productId, updateNestedObjectParse(objectParams))
+    return updateProduct
   }
 }
 

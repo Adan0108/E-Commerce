@@ -104,36 +104,36 @@ class CartService {
   }
 
   //this is incomplete
-  // static async deleteUserCart({ userId , productId }){
-  //   const query = { cart_userId: userId, cart_state: 'active'}
-  //   updateSet = {
-  //     $pull : {
-  //       cart_products : {
-  //         productId
-  //       }
-  //     }
-  //   }
-  //   const deleteCart = await cart.updateOne( query , updateSet)
-  //   return deleteCart
-  // }
-  // Delete a specific product from the cart (cart item)
-  static async deleteUserCartItem({ userId, productId }) {
-    const query = { cart_userId: userId, cart_state: 'active' };
+  static async deleteUserCart({ userId , productId }){
+    const query = { cart_userId: userId, cart_state: 'active'}
     const updateSet = {
-      $pull: {
-        cart_products: { productId } // remove any element with matching productId
+      $pull : {
+        cart_products : {
+          productId
+        }
       }
-    };
-
-    const result = await cart.updateOne(query, updateSet);
-    // Optionally check result.nModified (or result.modifiedCount)
-    return result;
+    }
+    const deleteCart = await cart.updateOne( query , updateSet)
+    return deleteCart
   }
+  // Delete a specific product from the cart (cart item)
+  // static async deleteUserCartItem({ userId, productId }) {
+  //   const query = { cart_userId: userId, cart_state: 'active' };
+  //   const updateSet = {
+  //     $pull: {
+  //       cart_products: { productId } // remove any element with matching productId
+  //     }
+  //   };
 
-  // Optionally, a function to delete/clear the entire cart
-  static async deleteUserCart({ userId }) {
-    return await cart.deleteOne({ cart_userId: userId, cart_state: 'active' });
-  }
+  //   const result = await cart.updateOne(query, updateSet);
+  //   // Optionally check result.nModified (or result.modifiedCount)
+  //   return result;
+  // }
+
+  // // Optionally, a function to delete/clear the entire cart
+  // static async deleteUserCart({ userId }) {
+  //   return await cart.deleteOne({ cart_userId: userId, cart_state: 'active' });
+  // }
 
   static async getListUserCart({ userId }){
     return await cart.findOne({

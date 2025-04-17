@@ -47,6 +47,7 @@ app.use((error, req, res, next) => {
   return res.status(statusCode).json({
     status: 'error',
     code: statusCode,
+    stack : error.stack, //only use for developmen stage
     message: error.message || 'Internal Server Error'
   })
 })

@@ -11,6 +11,7 @@ const { uploadDisk } = require('../../configs/multer.config');
 // router.use(authenticationV2)
 router.post('/product' , asyncHandler(UploadController.uploadFile));
 router.post('/product/thumb', uploadDisk.single('file'), asyncHandler(UploadController.uploadFileThumb));
+router.post('/product/mutiple', uploadDisk.array('files', 3), asyncHandler(UploadController.uploadImageFromLocalFiles));
 
 
 module.exports = router

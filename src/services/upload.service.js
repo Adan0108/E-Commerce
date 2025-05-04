@@ -2,7 +2,11 @@
 
 const crypto = require('crypto')
 const cloudinary = require("../configs/cloudinary.config");
-const { s3,PutObjectCommand } = require('../configs/s3.config')
+const { s3, PutObjectCommand, GetObjectCommand, DeleteBucketCommand } = require('../configs/s3.config')
+const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
+const { random } = require('lodash');
+
+const randomImageName = () => crypto.randomBytes(16).toString('hex')
 /////// upload file use S3Client ///////
 
 // 4. upload image from local using S3Client
@@ -11,17 +15,27 @@ const uploadImageFromLocalS3 = async (
   file
 ) => {
   try {
-    const randomImageName = () => crypto.randomBytes(16).toString('hex')
+  
+    const imageName = randomImageName();
     const command = new PutObjectCommand({
       Bucket: process.env.AWS_BUCKET_NAME,
-      Key: randomImageName() || 'unknown',
+      Key: imageName,
       Body: file.buffer,
       ContentType: 'image/jpeg', // this is what you need!
     })
 
+    //export url
+
     const result = await s3.send(command)
 
     console.log('Image uploaded successfully:', result);
+    const singedUrl = new GetObjectCommand({
+      Bucket: process.env.AWS_BUCKET_NAME,
+      Key: imageName,
+    })
+
+    const url = await getSignedUrl(s3, singedUrl, { expiresIn: 3600 });
+    console.log('Signed URL":', url);
     // return {
     //   image_url: result.secure_url,
     //   shopId: '1234',
@@ -31,7 +45,7 @@ const uploadImageFromLocalS3 = async (
     //     format: 'jpg'
     //   })
     // }
-    return result
+    return url
   } catch (error) {
     console.error('Upload error using S3Client:', error);
     throw error;  

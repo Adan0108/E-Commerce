@@ -3,8 +3,10 @@
 const crypto = require('crypto')
 const cloudinary = require("../configs/cloudinary.config");
 const { s3, PutObjectCommand, GetObjectCommand, DeleteBucketCommand } = require('../configs/s3.config')
-const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
-const { random } = require('lodash');
+// const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
+const { getSignedUrl } = require('@aws-sdk/cloudfront-signer');
+const { random, get } = require('lodash');
+const urlImagePublic = process.env.CLOUDFRONT_URL
 
 const randomImageName = () => crypto.randomBytes(16).toString('hex')
 /////// upload file use S3Client ///////
@@ -29,12 +31,23 @@ const uploadImageFromLocalS3 = async (
     const result = await s3.send(command)
 
     console.log('Image uploaded successfully:', result);
-    const singedUrl = new GetObjectCommand({
-      Bucket: process.env.AWS_BUCKET_NAME,
-      Key: imageName,
+
+    //have cloudfront url export
+    const url = getSignedUrl({
+      url: `${urlImagePublic}/${imageName}`,
+      keyPairId: process.env.CLOUDFRONT_KEY_PAIR_ID,
+      dateLessThan: new Date( Date.now() + 1000 * 60), //het han 60 giay
+      privateKey: process.env.CLOUDFRONT_PRIVATE_KEY,
     })
 
-    const url = await getSignedUrl(s3, singedUrl, { expiresIn: 3600 });
+    //This is for the S3
+    // const singedUrl = new GetObjectCommand({
+    //   Bucket: process.env.AWS_BUCKET_NAME,
+    //   Key: imageName,
+    // })
+
+    //This is the url for the S3
+    // const url = await getSignedUrl(s3, singedUrl, { expiresIn: 3600 });
     console.log('Signed URL":', url);
     // return {
     //   image_url: result.secure_url,
@@ -45,7 +58,10 @@ const uploadImageFromLocalS3 = async (
     //     format: 'jpg'
     //   })
     // }
-    return url
+    return {
+      url,
+      result
+    }
   } catch (error) {
     console.error('Upload error using S3Client:', error);
     throw error;  

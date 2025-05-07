@@ -10,7 +10,8 @@
 //   CONFLICT : 'Conflict error'
 // }
 
-const logger = require('../loggers/winston.log')
+// const logger = require('../loggers/winston.log')
+const myLogger = require('../loggers/mylogger.log')
 
 const {
   StatusCode,
@@ -24,7 +25,8 @@ class ErrorResponse extends Error {
     this.status = status
 
     //Log the error use winston
-    logger.error(`${this.status} - ${this.message}`)
+    // logger.error(`${this.status} - ${this.message}`)
+    myLogger.error(this.message , ['/api/v1/login', 'vv3344', {error:'Bad request error'}])
   }
 }
 

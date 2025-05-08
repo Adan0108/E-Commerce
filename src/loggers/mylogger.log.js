@@ -4,6 +4,15 @@
  * @description
  */
 
+/*
+  error : nghiem trong anh huong den hoat dong cua code va doanh nghiep,
+  warning : cac loi chung it anh huong den doanh nghiep,
+  debug : su dung de nam trong moi truong developemtn,
+  info : ghi lai cac thong tin quan trong de khac phuc su co,
+  requestId or traceId : thong tin chi tiet chi ghi vao file log
+ */
+
+  
 const { createLogger, format, transports } = require('winston');
 require('winston-daily-rotate-file');
 const { v4: uuidv4 } = require('uuid');

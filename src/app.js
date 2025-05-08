@@ -5,8 +5,8 @@ const {default : helmet} = require('helmet'); //for security header (use to hide
 const morgan = require('morgan'); //for response log
 const app = express();
 const compression = require('compression'); //for compressing response
-
-
+const {v4:uuidv4} = require('uuid') //for generating unique id
+const myLogger = require('./loggers/mylogger.log')
 //init middlewares
 app.use(morgan("dev"));
 app.use(helmet())
@@ -15,6 +15,20 @@ app.use(express.json()); // for parsing json request
 app.use(express.urlencoded({
   extended:true  // support parsing of application/x-www-form-urlencoded
 }))
+
+app.use((req, res, next) => {
+  const requestId = req.header['x-request-id']
+  req.requestId = requestId ? requestId : uuidv4()
+  myLogger.log(`input params ::${req.method}:: ` , [
+    req.path,
+    { requestId : req.requestId},
+    req.method == 'POST' ? req.body : req.query
+  ])
+
+  next()
+})
+
+
 //test pub.sub redis
 require('./tests/inventory.test')
 const productTest = require('./tests/product.test')
@@ -48,6 +62,15 @@ app.use((req, res, next) => {
 
 app.use((error, req, res, next) => {
   const statusCode = error.status || 500;
+  const resMessage = `${error.status} - ${Date.now() - error.now}ms - Response: ${JSON.stringify(error)}`
+  myLogger.error(resMessage , [
+    req.path,
+    { requestId : req.requestId},
+    {
+      message : error.message,
+    }
+
+  ])
   return res.status(statusCode).json({
     status: 'error',
     code: statusCode,

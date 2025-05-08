@@ -1,0 +1,11 @@
+2025-05-08 09:06:48.719 PM::info::/v1/api/shop/login::562aa531-7284-4a92-a37a-c789cd493ac7::input params ::POST:: ::{"email":"","password":"abc123!"}
+2025-05-08 09:06:48.730 PM::error::/v1/api/shop/login::562aa531-7284-4a92-a37a-c789cd493ac7::403 - 0ms - Response: {"status":403,"now":1746702408730}::{"message":"email missing"}
+2025-05-08 09:10:38.997 PM::info::/v1/api/shop/login::c151ded9-27be-4cdc-bee4-5545df0f1502::input params ::POST:: ::{"email":"","password":"abc123!"}
+2025-05-08 09:10:39.007 PM::error::/v1/api/shop/login::c151ded9-27be-4cdc-bee4-5545df0f1502::403 - 0ms - Response: {"status":403,"now":1746702639007}::{"message":"email missing"}
+2025-05-08 09:11:14.048 PM::info::/v1/api/shop/login::1adc51b1-d690-41c0-96f2-5559705df702::input params ::POST:: ::{"email":"testing5@gmail.com","password":"abc123!"}
+2025-05-08 09:11:37.909 PM::info::/v1/api/shop/login::83f86492-a19e-4356-9038-c0253db0da69::input params ::POST:: ::{"email":"testing5@gmail.com","password":"abc123!"}
+2025-05-08 09:13:59.301 PM::info::/v1/api/shop/login::ae509b9e-1dde-41d6-adb5-196a7d4c9f7a::input params ::POST:: ::{"email":"testing5@gmail.com","password":"abc123!"}
+2025-05-08 09:13:59.377 PM::error::/v1/api/shop/login::ae509b9e-1dde-41d6-adb5-196a7d4c9f7a::undefined - NaNms - Response: {}::{"message":"ErrorRepsonse is not defined"}
+2025-05-08 09:14:55.332 PM::info::/v1/api/shop/login::726fbc8c-c6c8-4f38-b86c-ef06b2c7e5dc::input params ::POST:: ::{"email":"testing5@gmail.com","password":"abc123!"}
+2025-05-08 09:15:04.137 PM::info::/v1/api/shop/login::2918b208-7dd2-48c1-a18f-e26fc4196c36::input params ::POST:: ::{"email":"","password":"abc123!"}
+2025-05-08 09:15:04.145 PM::error::/v1/api/shop/login::2918b208-7dd2-48c1-a18f-e26fc4196c36::403 - 1ms - Response: {"status":403,"now":1746702904144}::{"message":"Shop not register"}

@@ -36,10 +36,6 @@ class AccessController {
   }
 
   login = async (req, res, next) => {
-    const {email} = req.body
-    if(!email){
-      throw new BadRequestError('email missing')
-    }
     new SuccessResponse({
       metadata : await AccessService.login( req.body )
     }).send(res)

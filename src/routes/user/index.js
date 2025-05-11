@@ -3,8 +3,9 @@
 const express = require('express');
 const router = express.Router();
 const asyncHandler = require('../../helpers/asyncHandler');
-const { newUser } = require('../../controllers/user.controller');
+const { newUser, checkLoginEmailToken } = require('../../controllers/user.controller');
 
 router.post('/new_user', asyncHandler( newUser ))
+router.get('/welcome_back', asyncHandler( checkLoginEmailToken ))
 
 module.exports = router

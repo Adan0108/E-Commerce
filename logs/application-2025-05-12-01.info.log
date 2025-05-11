@@ -1,0 +1,10 @@
+2025-05-12 01:01:01.514 AM::info::/v1/api/user/new_user::94fbd08f-622d-4ec1-a7b2-3e3fa16a9d56::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 01:01:07.288 AM::info::/v1/api/user/welcome-back::8bbf5a28-4cb5-4104-b69e-e984a1b78195::input params ::GET:: ::{"token":"3941549373"}
+2025-05-12 01:01:07.371 AM::info::/favicon.ico::8be13418-be8a-4bcc-8fb2-b372abd8a15a::input params ::GET:: ::{}
+2025-05-12 01:01:14.879 AM::info::/v1/api/user/welcome_back::0dd3b4b2-b068-4e71-92d3-2874117ceb01::input params ::GET:: ::{"token":"3941549373"}
+2025-05-12 01:01:14.943 AM::error::/v1/api/user/welcome_back::0dd3b4b2-b068-4e71-92d3-2874117ceb01::403 - 0ms - Response: {"status":403,"now":1746975674943}::{"message":"Role is not defined"}
+2025-05-12 01:01:58.907 AM::info::/v1/api/user/new_user::24562757-c84f-4a41-ad62-5eedfffe6dfb::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 01:02:04.853 AM::info::/v1/api/user/welcome-back::fcf72c84-8ace-41e4-8641-03a3f7ea75ea::input params ::GET:: ::{"token":"3854350300"}
+2025-05-12 01:02:04.926 AM::info::/favicon.ico::3cae4465-1aa2-40ee-bc44-69a551644e66::input params ::GET:: ::{}
+2025-05-12 01:02:09.892 AM::info::/v1/api/user/welcome_back::2f6ce85b-459a-4fca-bb4a-3af683cff5dc::input params ::GET:: ::{"token":"3854350300"}
+2025-05-12 01:02:09.962 AM::error::/v1/api/user/welcome_back::2f6ce85b-459a-4fca-bb4a-3af683cff5dc::403 - 0ms - Response: {"status":403,"now":1746975729962}::{"message":"crypto.randomBytes is not a function"}

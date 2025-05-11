@@ -1,0 +1,64 @@
+2025-05-12 12:15:22.730 AM::info::/v1/api/user/new_user::29922566-c8ef-4b4b-91a8-7d44484f080b::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:16:03.974 AM::info::/v1/api/user/new_user::3040fc71-4296-49a7-9a82-bc02703b2526::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:16:22.124 AM::info::/v1/api/user/welcome-back::1a956152-1c1d-49bf-bd36-aafcaec203a0::input params ::GET:: ::{"token":"3684475294"}
+2025-05-12 12:16:22.219 AM::info::/favicon.ico::08296661-618f-4344-a20c-ff1ba13877fa::input params ::GET:: ::{}
+2025-05-12 12:16:33.921 AM::info::/v1/api/user/welcome_back::83377ffa-0aa3-439a-b753-71eae250741c::input params ::GET:: ::{"token":"3684475294"}
+2025-05-12 12:16:33.926 AM::error::/v1/api/user/welcome_back::83377ffa-0aa3-439a-b753-71eae250741c::undefined - NaNms - Response: {}::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2025-05-12 12:17:33.133 AM::info::/v1/api/user/new_user::7409dc0d-7aac-44d5-a0bb-ba7a10b270b3::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:17:39.955 AM::info::/v1/api/user/welcome-back::60fb3018-c1fc-48c0-9832-3f22c0fb5239::input params ::GET:: ::{"token":"344687112"}
+2025-05-12 12:17:40.027 AM::info::/favicon.ico::f7f99d96-b242-4b41-8459-a8bcf7814960::input params ::GET:: ::{}
+2025-05-12 12:17:48.615 AM::info::/v1/api/user/welcome_back::d41a67bd-e1bd-4218-bda6-546f4708f036::input params ::GET:: ::{"token":"344687112"}
+2025-05-12 12:17:48.622 AM::error::/v1/api/user/welcome_back::d41a67bd-e1bd-4218-bda6-546f4708f036::undefined - NaNms - Response: {}::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2025-05-12 12:19:45.413 AM::info::/v1/api/user/new_user::ec7d96c6-afa5-4f7f-9c98-d5ba17e6ad62::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:19:52.323 AM::info::/v1/api/user/welcome-back::2b8db6e2-17de-4b38-940f-a5cb069efc66::input params ::GET:: ::{"token":"1463505204"}
+2025-05-12 12:19:52.392 AM::info::/favicon.ico::66c00218-2bd1-4d52-b34b-41e00f602e56::input params ::GET:: ::{}
+2025-05-12 12:19:59.962 AM::info::/v1/api/user/welcome_back::797eb10f-97a1-4d96-8de3-8c6ffd1da6b8::input params ::GET:: ::{"token":"1463505204"}
+2025-05-12 12:19:59.969 AM::error::/v1/api/user/welcome_back::797eb10f-97a1-4d96-8de3-8c6ffd1da6b8::undefined - NaNms - Response: {}::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2025-05-12 12:32:18.122 AM::info::/v1/api/user/welcome_back::971d5c42-3528-4d45-bce3-898d7f5f4702::input params ::GET:: ::{"token":"1463505204"}
+2025-05-12 12:32:18.135 AM::error::/v1/api/user/welcome_back::971d5c42-3528-4d45-bce3-898d7f5f4702::403 - 1ms - Response: {"status":403,"now":1746973938134}::{"message":"token not found"}
+2025-05-12 12:32:27.841 AM::info::/v1/api/user/new_user::a5aa96ba-37fb-4162-b916-c3e0b23c69e1::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:32:35.005 AM::info::/v1/api/user/welcome-back::6f07ab45-98b6-42a2-a68b-6efcf1de2b0c::input params ::GET:: ::{"token":"3000033235"}
+2025-05-12 12:32:35.082 AM::info::/favicon.ico::6429df2e-6b95-4507-9969-5e85f63b3c26::input params ::GET:: ::{}
+2025-05-12 12:32:41.128 AM::info::/v1/api/user/welcome_back::492f1074-ac5a-43b6-8d9e-b10d5223321a::input params ::GET:: ::{"token":"3000033235"}
+2025-05-12 12:32:41.138 AM::error::/v1/api/user/welcome_back::492f1074-ac5a-43b6-8d9e-b10d5223321a::403 - 1ms - Response: {"status":403,"now":1746973961137}::{"message":"Token not found"}
+2025-05-12 12:32:45.684 AM::info::/v1/api/user/welcome_back::18e86ac2-e7c4-4e0e-a0eb-9d5d801a7069::input params ::GET:: ::{"token":"3000033235"}
+2025-05-12 12:32:45.690 AM::error::/v1/api/user/welcome_back::18e86ac2-e7c4-4e0e-a0eb-9d5d801a7069::403 - 0ms - Response: {"status":403,"now":1746973965690}::{"message":"token not found"}
+2025-05-12 12:33:09.704 AM::info::/v1/api/user/new_user::11dba26b-cb78-420b-9478-2a6504bcd108::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:33:16.900 AM::info::/v1/api/user/welcome-back::db621571-4cc3-4bd2-91af-1513dc58788c::input params ::GET:: ::{"token":"3584618238"}
+2025-05-12 12:33:16.984 AM::info::/favicon.ico::5259fd32-bc15-46b2-abf3-6a329fb955f2::input params ::GET:: ::{}
+2025-05-12 12:33:22.326 AM::info::/v1/api/user/welcome_back::bbfb86e1-fb20-430e-9581-6dfaa4c93b2e::input params ::GET:: ::{"token":"3584618238"}
+2025-05-12 12:33:22.335 AM::error::/v1/api/user/welcome_back::bbfb86e1-fb20-430e-9581-6dfaa4c93b2e::403 - 1ms - Response: {"status":403,"now":1746974002334}::{"message":"Token not found"}
+2025-05-12 12:33:31.218 AM::info::/v1/api/user/welcome-back::ce41095f-bb0c-44bf-9cc1-9e88bfab3c1a::input params ::GET:: ::{"token":"3584618238"}
+2025-05-12 12:33:31.292 AM::info::/favicon.ico::9b5ed4da-de4d-404c-b6ce-65fceb5e4499::input params ::GET:: ::{}
+2025-05-12 12:33:38.440 AM::info::/v1/api/user/new_user::5eb2e94d-2ea8-4f98-a51a-6e36e48737bf::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:33:51.959 AM::info::/v1/api/user/welcome-back::8ca3d08c-ba37-4c3f-9748-49d506029f3d::input params ::GET:: ::{"token":"1106201444"}
+2025-05-12 12:33:52.027 AM::info::/favicon.ico::d7e46dcc-8ea5-425a-b9b8-b1dc470568e7::input params ::GET:: ::{}
+2025-05-12 12:33:56.119 AM::info::/v1/api/user/welcome_back::b762d62a-0045-46cc-bd85-bbd897b18b92::input params ::GET:: ::{"token":"1106201444"}
+2025-05-12 12:33:56.126 AM::error::/v1/api/user/welcome_back::b762d62a-0045-46cc-bd85-bbd897b18b92::403 - 0ms - Response: {"status":403,"now":1746974036125}::{"message":"Token not found"}
+2025-05-12 12:39:57.037 AM::info::/v1/api/user/new_user::e7df4fc0-1bdd-48e0-9d01-b0efb45c085a::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:40:10.398 AM::info::/v1/api/user/welcome-back::850d3c15-9207-40a8-bb5f-334d626c0d79::input params ::GET:: ::{"token":"1106201444"}
+2025-05-12 12:40:10.478 AM::info::/favicon.ico::57ad9ecc-f710-4ee8-913f-add1243ed5f6::input params ::GET:: ::{}
+2025-05-12 12:40:23.973 AM::info::/v1/api/user/welcome_back::f3835ad5-8d52-40d7-ae58-a646b74cf6d1::input params ::GET:: ::{"token":"1106201444"}
+2025-05-12 12:40:23.981 AM::error::/v1/api/user/welcome_back::f3835ad5-8d52-40d7-ae58-a646b74cf6d1::403 - 0ms - Response: {"status":403,"now":1746974423981}::{"message":"token not found"}
+2025-05-12 12:40:30.093 AM::info::/v1/api/user/welcome_back::60e4bd2a-798e-4721-bd2c-564f0b2e5ed3::input params ::GET:: ::{"token":"1938047235"}
+2025-05-12 12:40:30.102 AM::error::/v1/api/user/welcome_back::60e4bd2a-798e-4721-bd2c-564f0b2e5ed3::403 - 1ms - Response: {"status":403,"now":1746974430100}::{"message":"Token not found"}
+2025-05-12 12:45:07.543 AM::info::/v1/api/user/new_user::b3e1d4ec-463a-4a26-a1e4-1aed35691a3c::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:45:14.109 AM::info::/v1/api/user/welcome-back::bf92f81c-9d24-4928-9d06-cea7cc8fe53c::input params ::GET:: ::{"token":"1178337545"}
+2025-05-12 12:45:14.180 AM::info::/favicon.ico::3127dcfb-3f41-49e8-8c6a-6c43126f906e::input params ::GET:: ::{}
+2025-05-12 12:45:20.577 AM::info::/v1/api/user/welcome_back::2fbfe44e-69f4-4e6d-8d82-a94618af6366::input params ::GET:: ::{"token":"1178337545"}
+2025-05-12 12:45:20.648 AM::error::/v1/api/user/welcome_back::2fbfe44e-69f4-4e6d-8d82-a94618af6366::403 - 1ms - Response: {"status":403,"now":1746974720647}::{"message":"User validation failed: usr_id: Cast to Number failed for value \"{\n  usr_id: 1,\n  usr_slug: 'abcxyz',\n  usr_name: 'quanganhle0108@gmail.com',\n  usr_password: '$2b$10$bY/x8lD2ttJvgF1NMRSeQuvqf9WZzCMvIgRX5n4H.o/OrownBFcwW',\n  usr_role: ''\n}\" (type Object) at path \"usr_id\", usr_email: Path `usr_email` is required., usr_slug: Path `usr_slug` is required."}
+2025-05-12 12:50:56.339 AM::info::/v1/api/user/new_user::adbd031b-1a2c-4175-b9c0-5e5f735bfcef::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:51:02.996 AM::info::/v1/api/user/welcome-back::fee4b53e-9867-4a4a-9557-c53286c30326::input params ::GET:: ::{"token":"2864663277"}
+2025-05-12 12:51:03.050 AM::info::/favicon.ico::d5738678-94ae-4a15-adaf-38817563415b::input params ::GET:: ::{}
+2025-05-12 12:51:08.066 AM::info::/v1/api/user/welcome_back::ab298a6f-52a7-4db5-acd7-c46e255feca9::input params ::GET:: ::{"token":"2864663277"}
+2025-05-12 12:51:08.138 AM::error::/v1/api/user/welcome_back::ab298a6f-52a7-4db5-acd7-c46e255feca9::403 - 2ms - Response: {"status":403,"now":1746975068136}::{"message":"User validation failed: usr_id: Cast to Number failed for value \"{\n  usr_id: 1,\n  usr_slug: 'abcxyz',\n  usr_name: 'quanganhle0108@gmail.com',\n  usr_password: '$2b$10$JJwgmjo1gCZEMrdYrNs5CObuEti3RIl.8R4mZOxxxnmRcAxDgHzkS',\n  usr_email: 'quanganhle0108@gmail.com',\n  usr_role: ''\n}\" (type Object) at path \"usr_id\", usr_slug: Path `usr_slug` is required., usr_email: Path `usr_email` is required."}
+2025-05-12 12:52:54.215 AM::info::/v1/api/user/new_user::85ebc5fa-add5-4baa-9415-722848506d21::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:52:59.781 AM::info::/v1/api/user/welcome-back::55d59379-1b1f-45f2-a9a5-baeb3ff7ab36::input params ::GET:: ::{"token":"447144729"}
+2025-05-12 12:52:59.841 AM::info::/favicon.ico::b7e1e4f5-30ed-45bd-8813-30d26dbf845b::input params ::GET:: ::{}
+2025-05-12 12:53:04.150 AM::info::/v1/api/user/welcome_back::b79968d7-5f96-4279-973b-8d7ae74751c4::input params ::GET:: ::{"token":"447144729"}
+2025-05-12 12:53:04.217 AM::error::/v1/api/user/welcome_back::b79968d7-5f96-4279-973b-8d7ae74751c4::403 - 0ms - Response: {"status":403,"now":1746975184216}::{"message":"User validation failed: usr_role: Cast to ObjectId failed for value \"\" (type string) at path \"usr_role\" because of \"BSONError\", usr_email: Path `usr_email` is required."}
+2025-05-12 12:53:27.968 AM::info::/v1/api/user/new_user::42713c84-b757-4dee-9045-eaa774740547::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-12 12:53:34.631 AM::info::/v1/api/user/welcome-back::a4822825-71be-467b-9baa-653dda8c38de::input params ::GET:: ::{"token":"285779355"}
+2025-05-12 12:53:34.709 AM::info::/favicon.ico::83c3c541-1841-4adb-8ff5-b371af6756c5::input params ::GET:: ::{}
+2025-05-12 12:53:39.396 AM::info::/v1/api/user/welcome_back::72b2d92e-ad6d-4fcd-a5e2-1372c84b9488::input params ::GET:: ::{"token":"285779355"}
+2025-05-12 12:53:39.459 AM::error::/v1/api/user/welcome_back::72b2d92e-ad6d-4fcd-a5e2-1372c84b9488::403 - 0ms - Response: {"status":403,"now":1746975219459}::{"message":"User validation failed: usr_role: Cast to ObjectId failed for value \"\" (type string) at path \"usr_role\" because of \"BSONError\""}

@@ -1,0 +1,2 @@
+2025-05-12 01:01:14.944 AM::error::/v1/api/user/welcome_back::0dd3b4b2-b068-4e71-92d3-2874117ceb01::403 - 0ms - Response: {"status":403,"now":1746975674943}::{"message":"Role is not defined"}
+2025-05-12 01:02:09.963 AM::error::/v1/api/user/welcome_back::2f6ce85b-459a-4fca-bb4a-3af683cff5dc::403 - 0ms - Response: {"status":403,"now":1746975729962}::{"message":"crypto.randomBytes is not a function"}

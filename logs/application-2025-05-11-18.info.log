@@ -1,0 +1,19 @@
+2025-05-11 06:14:07.638 PM::info::/v1/api/user/new_user::95f356aa-982b-4952-b71f-a7a5116169bb::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:15:15.097 PM::info::/v1/api/user/new_user::22841ebe-2604-448c-8e17-128b7f344e67::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:15:36.379 PM::info::/v1/api/user/new_user::b95a511b-bf1f-4360-b007-fc830377ce75::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:18:40.951 PM::info::/v1/api/user/new_user::0369d841-2b0f-4c0e-9878-11e771d3e3bf::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:20:10.879 PM::info::/v1/api/user/new_user::4d012b59-b63c-4d25-a4d5-3c8a3f35ac27::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:21:04.941 PM::info::/v1/api/user/new_user::d2241031-54f7-4bd1-b7d4-568f64a95100::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:21:15.731 PM::info::/cgp/welcome-back::0d6085b7-8ec7-495b-a598-555ea033a978::input params ::GET:: ::{"token":"{  otp_token: '3285460287',  otp_email: 'quanganhle0108@gmail.com',  otp_status: 'pending',  expireAt: 2025-05-11T08:20:59.118Z,  _id: new ObjectId('68205df01579f1904520be6d'),  createdAt: 2025-05-11T08:21:04.959Z,  updatedAt: 2025-05-11T08:21:04.959Z,  __v: 0}"}
+2025-05-11 06:21:15.801 PM::info::/favicon.ico::a47457a4-18a6-45ce-816b-45ae09b6d90e::input params ::GET:: ::{}
+2025-05-11 06:22:25.903 PM::info::/v1/api/user/new_user::1f9a6820-4d28-4ee6-9ab5-6e39295b29b7::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:22:43.661 PM::info::/v1/api/user/new_user::aeceb6e1-ce63-442f-b366-590cf59d0a0e::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:22:50.972 PM::info::/cgp/welcome-back::8390e9ec-f5e5-427a-927d-0a956b282b5b::input params ::GET:: ::{"token":"{  otp_token: '2633700243',  otp_email: 'quanganhle0108@gmail.com',  otp_status: 'pending',  expireAt: 2025-05-11T08:22:35.800Z,  _id: new ObjectId('68205e53b4d4c61805d04b5b'),  createdAt: 2025-05-11T08:22:43.690Z,  updatedAt: 2025-05-11T08:22:43.690Z,  __v: 0}"}
+2025-05-11 06:22:51.029 PM::info::/favicon.ico::e67b42f2-94a1-4c3c-aeea-32922f0591de::input params ::GET:: ::{}
+2025-05-11 06:32:32.592 PM::info::/cgp/welcome-back::05d84202-fa9c-44d4-8d23-91eed9c5a8b5::input params ::GET:: ::{"token":"{  otp_token: '2633700243',  otp_email: 'quanganhle0108@gmail.com',  otp_status: 'pending',  expireAt: 2025-05-11T08:22:35.800Z,  _id: new ObjectId('68205e53b4d4c61805d04b5b'),  createdAt: 2025-05-11T08:22:43.690Z,  updatedAt: 2025-05-11T08:22:43.690Z,  __v: 0}"}
+2025-05-11 06:32:32.665 PM::info::/favicon.ico::5627273a-1bd5-40d9-af4e-d295f47e54ed::input params ::GET:: ::{}
+2025-05-11 06:33:57.343 PM::info::/v1/api/user/new_user::84c3c50e-a9f2-4756-b006-6cd1eca79baf::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:34:08.331 PM::info::/v1/api/user/new_user::c20fe1db-19a3-40ff-9b22-0d5b05d74ded::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:34:39.676 PM::info::/v1/api/user/new_user::bf95724e-343e-44a0-a632-93b6a4d6eae6::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:34:57.477 PM::info::/cgp/welcome-back::6d0ec615-88ed-4447-8df4-110901c494d9::input params ::GET:: ::{"token":"undefined"}
+2025-05-11 06:34:57.557 PM::info::/favicon.ico::a4f286a3-b6a9-4b95-b0b8-4b149a9f4e7b::input params ::GET:: ::{}

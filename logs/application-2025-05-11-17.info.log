@@ -1,0 +1,8 @@
+2025-05-11 05:32:21.005 PM::info::/v1/api/email/new_template::17b52ca6-7896-4114-9cd2-55e88bbf16bf::input params ::POST:: ::{"tem_id":10001,"tem_name":"HTML EMAIL TOKEN"}
+2025-05-11 05:32:21.025 PM::error::/v1/api/email/new_template::17b52ca6-7896-4114-9cd2-55e88bbf16bf::undefined - NaNms - Response: {"errors":{"tem_id":{"name":"ValidatorError","message":"Path `tem_id` is required.","properties":{"message":"Path `tem_id` is required.","type":"required","path":"tem_id"},"kind":"required","path":"tem_id"}},"_message":"template validation failed","name":"ValidationError","message":"template validation failed: tem_id: Path `tem_id` is required."}::{"message":"template validation failed: tem_id: Path `tem_id` is required."}
+2025-05-11 05:32:45.147 PM::info::/v1/api/email/new_template::b683beb3-4aaf-4126-b0ef-cebd04a8ea6a::input params ::POST:: ::{"tem_id":10001,"tem_name":"HTML EMAIL TOKEN"}
+2025-05-11 05:49:57.855 PM::info::/v1/api/user/new_user::c724aedc-3e3d-4412-b82f-29f7c7ac74b8::input params ::POST:: ::{"email":"service.adan108@gmail.com"}
+2025-05-11 05:50:37.765 PM::info::/v1/api/user/new_user::dbf12ede-56a3-4269-ba2c-980ff69fc6c8::input params ::POST:: ::{"email":"service.adan108@gmail.com"}
+2025-05-11 05:51:42.287 PM::info::/v1/api/user/new_user::e874aee1-0d97-4419-bfab-37e939d719ae::input params ::POST:: ::{"email":"service.adan108@gmail.com"}
+2025-05-11 05:54:30.115 PM::info::/v1/api/user/new_user::f84d9df8-669d-4daa-b19c-2fc0ae77f59e::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 05:58:33.198 PM::info::/v1/api/user/new_user::35ad7bb6-0c89-4af9-9f8b-9ed9618a7447::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}

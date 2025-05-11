@@ -59,11 +59,25 @@ const updateNestedObjectParse = object => {
   return final;
 }
 
+//replacePlaceholder
+//{lastname}
+const replacePlaceholder = ( template , params ) =>{
+  Object.keys(params).forEach( k => {
+    const placeHolder =`{{${k}}}` //verifyKey
+    template = template.replace(new RegExp(placeHolder , 'g'),params[k])
+  })
+  return template
+
+}
+
+
 
 module.exports = { getInfoData,
   getSelectData ,
   unGetSelectData,
   removeUndefinedObject,
   updateNestedObjectParse,
-  convertToObjectIdMongodb
+  convertToObjectIdMongodb,
+  replacePlaceholder
+
  }

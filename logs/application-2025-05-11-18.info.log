@@ -17,3 +17,7 @@
 2025-05-11 06:34:39.676 PM::info::/v1/api/user/new_user::bf95724e-343e-44a0-a632-93b6a4d6eae6::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
 2025-05-11 06:34:57.477 PM::info::/cgp/welcome-back::6d0ec615-88ed-4447-8df4-110901c494d9::input params ::GET:: ::{"token":"undefined"}
 2025-05-11 06:34:57.557 PM::info::/favicon.ico::a4f286a3-b6a9-4b95-b0b8-4b149a9f4e7b::input params ::GET:: ::{}
+2025-05-11 06:36:10.805 PM::info::/v1/api/user/new_user::65de4302-66c8-4f26-bded-55a754f9d75a::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}
+2025-05-11 06:36:20.511 PM::info::/cgp/welcome-back::c052cfd0-63d9-44f3-95b9-bfd786ab0090::input params ::GET:: ::{"token":"3409697090"}
+2025-05-11 06:36:20.584 PM::info::/favicon.ico::94046cc1-a3c6-4d8f-a271-163fc3cba61d::input params ::GET:: ::{}
+2025-05-11 06:38:00.543 PM::info::/v1/api/user/new_user::1a667460-a49e-4217-97f6-c77149660b13::input params ::POST:: ::{"email":"quanganhle0108@gmail.com"}

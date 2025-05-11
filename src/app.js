@@ -50,6 +50,9 @@ require('./dbs/init.mongodb');
 //   });
 // })
 
+const initRedis = require('./dbs/init.redis')
+initRedis.initRedis()
+
 app.use('/',require('./routes'))
  
 //handle error

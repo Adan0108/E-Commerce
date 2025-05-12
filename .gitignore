@@ -6,3 +6,4 @@ public_key.pem
 # Ignore node_modules folder
 node_modules
 .qodo
+logs

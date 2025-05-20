@@ -50,8 +50,15 @@ require('./dbs/init.mongodb');
 //   });
 // })
 
+//redis
 const initRedis = require('./dbs/init.redis')
 initRedis.initRedis()
+
+//IORedis
+const ioredis = require('./dbs/init.ioredis')
+ioredis.init({
+  IOREDIS_IS_ENABLE: true
+})
 
 app.use('/',require('./routes'))
  

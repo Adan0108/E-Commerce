@@ -5,11 +5,12 @@ const productController = require('../../controllers/product.controller');
 const router = express.Router();
 const asyncHandler = require('../../helpers/asyncHandler');
 const { authenticationV2 } = require('../../auth/authUtils');
+const { readCache } = require('../../middlewares/cache.middleware');
 
 router.get('/search/:keySearch', asyncHandler(productController.getListSearchProduct));
 router.get('', asyncHandler(productController.findAllProducts));
 router.get('/:product_id', asyncHandler(productController.findProduct));
-router.get('/sku/select_variation', asyncHandler(productController.findOneSku))
+router.get('/sku/select_variation', readCache ,asyncHandler(productController.findOneSku))
 router.get('/spu/get_spu_info', asyncHandler(productController.findOneSpu))
 //authentication//
 router.use(authenticationV2)
